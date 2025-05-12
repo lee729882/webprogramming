@@ -1,1 +1,1 @@
-# webprogramming
+# 캠퍼스 생활 가이드
