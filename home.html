@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캠퍼스 생활 가이드</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Font Awesome 사용 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- 스크립트 시작 -->
+    <script>
+        // 스크롤 시 헤더가 상단에 고정된 채로 따라오도록 설정
+        let lastScrollY = 0;
+    
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            const currentScrollY = window.scrollY;
+    
+            if (currentScrollY > lastScrollY) {
+                // 스크롤을 내릴 때 헤더를 숨김
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                // 스크롤을 올릴 때 헤더를 보임
+                header.style.transform = 'translateY(0)';
+                header.style.position = 'fixed';
+                header.style.top = '0';
+                header.style.width = '100%';
+                header.style.zIndex = '1000';
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
+            }
+            
+            lastScrollY = currentScrollY;
+        });
+    
+        // 로딩 스피너 표시 및 숨기기 함수
+        function showLoadingSpinner() {
+            document.getElementById("loadingSpinner").style.display = "block";
+        }
+    
+        function hideLoadingSpinner() {
+            document.getElementById("loadingSpinner").style.display = "none";
+        }
+    </script>
+    
+
+<!-- 로딩 스피너 (hidden by default) -->
+<div id="loadingSpinner" class="loader" style="display: none;"></div>
+    <div class="wrap">
+    <!-- 검색 영역 -->
+    <div class="intro_bg" id="homeSection">
+        <div class="header">
+            <div class="searchArea">
+                <form onsubmit="searchText(); return false;">
+                    <input type="search" id="searchInput" placeholder="검색">
+                    <button type="button" onclick="searchText()">검색</button>
+                </form>
+            </div>
+                <ul class="nav">
+                    <li><a href="#homeSection">HOME</a></li>
+                    <li><a href="#aboutSection">ABOUT</a></li>
+                    <li><a href="#serviceSection">SERVICE</a></li>
+                    <li><a href="#contactSection">Q&A</a></li>
+                </ul>
+            </div>
+            <div class="intro_text">
+                <h1>캠퍼스 생활 가이드</h1>
+            </div>
+        </div>
+        <!-- intro end-->
+
+        <ul class="amount">
+            <li>
+                <div>
+                    <i class="fas fa-user-graduate icon"></i>
+                    <div class="contents1">총 학생 수</div>
+                    <div class="result">7,949명</div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <i class="fas fa-university icon"></i>
+                    <div class="contents1">설립연도</div>
+                    <div class="result">1946년</div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <i class="fas fa-book icon"></i>
+                    <div class="contents1">도서관 장서 수</div>
+                    <div class="result">50만 권 이상</div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <i class="fas fa-chalkboard-teacher icon"></i>
+                    <div class="contents1">학과/전공 수</div>
+                    <div class="result">40개 이상</div>
+                </div>
+            </li>
+        </ul>
+        <!-- amount end -->
+
+<!-- Font Awesome 링크 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<!-- ABOUT section -->
+<div class="main_text0" id="aboutSection">
+    <h1>ABOUT</h1>
+    <div class="contents1">
+        목포대학교는 학생들의 성공적인 캠퍼스 생활을 위해 다양한 지원 프로그램과 편의시설을 제공합니다. 
+    </div>    <ul class="icons">
+        <!-- 학생 지원 서비스 -->
+        <li>
+            <div class="icon_img">
+                <i class="fas fa-hands-helping" style="font-size: 75px; color: #4CAF50;"></i> <!-- 학생 지원 아이콘 -->
+            </div>
+            <div class="contents1_bold">학생 지원 및 상담 서비스</div>
+            <div class="contents2">
+                학생들이 학업 및 진로와 관련된 상담을 받을 수 있는 다양한 지원 프로그램을 제공합니다.
+            </div>
+            <div class="more button-more" onclick="window.open('https://counsel.mokpo.ac.kr/counsel/index.do', '_blank')">MORE</div>
+        </li>
+        <!-- 캠퍼스 시설 안내 -->
+        <li>
+            <div class="icon_img">
+                <i class="fas fa-school" style="font-size: 75px; color: #4CAF50;"></i> <!-- 캠퍼스 시설 아이콘 -->
+            </div>
+            <div class="contents1_bold">주요 캠퍼스 시설 안내</div>
+            <div class="contents2">
+                캠퍼스 내 도서관, 체육관, 카페 등 다양한 편의시설에 대한 정보와 이용 방법을 소개합니다.
+            </div>
+            <div class="more button-more" onclick="window.open('https://www.mokpo.ac.kr/www/409/subview.do', '_blank')">MORE</div>
+        </li>
+        <!-- 지역 사회와의 협력 -->
+        <li>
+            <div class="icon_img">
+                <i class="fas fa-handshake" style="font-size: 75px; color: #4CAF50;"></i> <!-- 지역 사회 협력 아이콘 -->
+            </div>
+            <div class="contents1_bold">지역 사회와의 협력 및 봉사 활동</div>
+            <div class="contents2">
+                목포대학교는 지역 사회와의 협력을 통해 학생들이 봉사 및 참여 활동을 할 수 있는 다양한 기회를 제공합니다.
+            </div>
+            <div class="more button-more" onclick="window.open('https://www.newsway.co.kr/news/view?ud=2022022614585440521', '_blank')">MORE</div>
+        </li>
+    </ul>
+</div>
+<!-- ABOUT end -->
+
+<!-- 오른쪽 중앙에 고정된 날씨 정보 팝업 -->
+<div id="weatherPopup" class="weather-popup">
+    <span id="closeWeatherButton" class="close">&times;</span>
+    <h2>목포대학교 날씨 정보</h2>
+    <div id="weatherContent">날씨 정보를 불러오는 중...</div>
+</div>
+
+        <!-- SERVICE section (Google Maps and buttons) -->
+        <div class="main_text1" id="serviceSection">
+            <h1>SERVICE</h1>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 5px; margin-bottom: 20px;">
+                <button class="button-style" onclick="searchPlaces('한식')">한식</button>
+                <button class="button-style" onclick="searchPlaces('중식')">중식</button>
+                <button class="button-style" onclick="searchPlaces('분식')">분식</button>
+                <button class="button-style" onclick="searchPlaces('일식')">일식</button>
+                <button class="button-style" onclick="searchPlaces('카페')">카페</button>
+            </div>
+            <div class="zone-buttons">
+                <div id="zoneAButton" class="zone-button" onclick="toggleDropdown('zoneADropdown')">A구역</div>
+                <div id="zoneBButton" class="zone-button" onclick="toggleDropdown('zoneBDropdown')">B구역</div>
+                <div id="zoneCButton" class="zone-button" onclick="toggleDropdown('zoneCDropdown')">C구역</div>
+            </div>
+ <!-- 구역 A 드롭다운 -->
+ <div id="zoneADropdown" class="dropdown">
+    <a href="javascript:void(0);" onclick="showBuildingLocation('대학본부')">대학본부[A01]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('종합운동장')">종합운동장[A02]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('학군단')">학군단[A03]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('체육관')">체육관[A04]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('박물관')">박물관[A05]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('고시생활관')">고시생활관[A06]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('사회과학대학')">사회과학대학[A08]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('중앙도서관')">중앙도서관[A09]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('정보종합센터')">정보종합센터[A10]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('생활편의관')">생활편의관[A13]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('학생회관')">학생회관[A14]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('창조관')">창조관[A38]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('플라자60')">플라자60[A60]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('기념관')">60주년기념관[A70]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('차고지')">차고지</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('수위실')">수위실</a>
+</div>
+
+<!-- 구역 B 드롭다운 -->
+<div id="zoneBDropdown" class="dropdown">
+    <a href="javascript:void(0);" onclick="showBuildingLocation('인문대학')">인문대학[B15]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('공동실험실습관')">공동실험실습관[B16]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('교수회관')">교수회관[B17]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('공과대학1호관')">공과대학 1호관[B18]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('공과대학2호관')">공과대학 2호관[B19]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('공과대학3호관')">공과대학 3호관[B20]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('공과대학4호관')">공과대학 4호관[B21]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('공과대학5호관')">공과대학 5호관[B26]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('교수아파트')">교수아파트[B22]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('생활과학관')">생활과학관[B23]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('대외협력관')">대외협력관[B24]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('스포츠센터')">스포츠센터[B25]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('창업보육센터')">창업보육센터</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('산학융합센터')">산학융합센터</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('부속공장')">부속공장</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('부속농장')">부속농장</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('위험물옥내저장소')">위험물옥내저장소</a>
+</div>
+
+<!-- 구역 C 드롭다운 -->
+<div id="zoneCDropdown" class="dropdown">
+    <a href="javascript:void(0);" onclick="showBuildingLocation('자연과학대학1호관')">자연과학대학 1호관[C30]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('자연과학대학2호관')">자연과학대학 2호관[C31]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('학생생활관관리동')">학생생활관-관리동[C32]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('학생생활관가람관')">학생생활관-가람관[C33]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('학생생활관다래관')">학생생활관-다래관[C34]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('학생생활관햇귀관')">학생생활관-햇귀관[C35]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('학생생활관한울관')">학생생활관-한울관[C36]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('학생생활관마루ㆍ다솜관')">학생생활관 마루, 다솜관[C37]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('약학관')">약학관[C38]</a>
+    <a href="javascript:void(0);" onclick="showBuildingLocation('장비지원센터')">장비지원센터</a>
+</div>
+            <div id="map" style="width: 60%; height: 500px; margin: 20px auto; border: 3px solid #333; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);"></div>
+        </div>
+
+        <div class="wrap">
+            <!-- 기존 내용 생략 -->
+    
+            <!-- CONTACT section -->
+            <div class="main_text2" id="contactSection">
+                <ul>
+                    <li>
+                        <div><h1>Q&A</h1></div>
+                        <div>목포대학교에 궁금한 게 있으시다면 눌러주세요!</div>
+                        <div class="more2" onclick="openChatbot()">더 알아보기</div>
+                    </li>
+                    <li>
+                    </li>
+                </ul>
+            </div>
+            <!-- CONTACT end -->
+
+            
+    
+<!-- 챗봇 모달 -->
+<div id="chatbotModal" class="chatbot-modal" style="display: none;">
+    <div class="chatbot-content">
+        <span id="closeChatbotButton" class="close">&times;</span>
+        <h2>AI 챗봇 상담</h2>
+        <div id="chatbotMessages" class="chatbot-messages">
+            <!-- 메시지 내용 -->
+        </div>
+        <input type="text" id="chatbotInput" placeholder="메시지를 입력하세요..." onkeypress="handleChatInput(event)">
+    </div>
+</div>  
+        <!-- JavaScript for Chatbot -->
+        <script>
+            // 챗봇 모달 열기
+            function openChatbot() {
+                const chatbotModal = document.getElementById("chatbotModal");
+                chatbotModal.style.display = "flex"; // 중앙에 표시
+
+            }
+
+            // 챗봇 모달 닫기
+            function closeChatbot() {
+                const chatbotModal = document.getElementById("chatbotModal");
+                chatbotModal.style.display = "none";
+
+            }
+
+            document.getElementById("closeChatbotButton").addEventListener("click", closeChatbot);
+
+            // 챗봇 메시지 처리
+            function handleChatInput(event) {
+                if (event.key === "Enter") {
+                    const userInput = event.target.value;
+                    displayMessage("user", userInput);
+                    event.target.value = ""; // 입력창 비우기
+                    getChatGPTResponse(userInput); // ChatGPT 응답 요청
+                }
+            }
+
+            // 메시지 표시 함수
+            function displayMessage(sender, message) {
+                const messageContainer = document.getElementById("chatbotMessages");
+                const messageDiv = document.createElement("div");
+                messageDiv.className = sender;
+                messageDiv.innerText = message;
+                messageContainer.appendChild(messageDiv);
+                messageContainer.scrollTop = messageContainer.scrollHeight;
+            }
+    async function getChatGPTResponse(userInput) {
+        
+    displayMessage("chatbot", "응답을 생성 중입니다...");
+
+    try {
+        const response = await fetch('http://localhost:5500/chat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ message: userInput })
+        });
+
+        const data = await response.json();
+        displayMessage("chatbot", data.message);
+    } catch (error) {
+        displayMessage("chatbot", "죄송합니다. 현재 요청을 처리할 수 없습니다.");
+        console.error("Error:", error);
+    }
+}
+
+        </script>
+    </div>
+
+        <!-- footer -->
+        <div class="footer">
+            <div>
+                ⓒ 2024 캠퍼스 생활 가이드 <br>
+                이름 : 이승철 <br>
+                학번 : 213619 <br>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <!-- 구글 설문 폼 버튼 -->
+        <div style="margin-top: 15px;">
+            <button 
+                style="
+                    padding: 10px 20px; 
+                    font-size: 16px; 
+                    color: white; 
+                    background-color: #4CAF50; 
+                    border: none; 
+                    border-radius: 5px; 
+                    cursor: pointer;" 
+                onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdIGyjNAXfnaDACEwgmNDQzM8rZH6UDoqQGYxl5VGBdEFtZRQ/viewform', '_blank')">
+                캠퍼스 설문 참여하기
+            </button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var map;
+        var service;
+        var markers = [];
+        var infowindow;
+
+        const mokpoUniversity = { lat: 34.910319, lng: 126.4361795 };
+
+        function initMap() {
+            const mokpoUniversity = { lat: 34.910319, lng: 126.4361795 };
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: mokpoUniversity,
+                zoom: 15
+            });
+
+            new google.maps.Marker({
+                position: mokpoUniversity,
+                map: map,
+                title: '국립목포대학교'
+            });
+
+            infowindow = new google.maps.InfoWindow();
+        }
+
+        function searchPlaces(foodType) {
+            clearMarkers(); // 기존 마커를 삭제
+
+            const request = {
+                location: mokpoUniversity,
+                radius: '2000', // 반경 2km로
+                keyword: foodType
+            };
+
+            service = new google.maps.places.PlacesService(map);
+            service.nearbySearch(request, (results, status) => {
+                if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    results.forEach(place => createMarker(place));
+                } else {
+                    alert('검색 결과를 가져오는 데 실패했습니다: ' + status);
+                }
+            });
+        }
+
+        function createMarker(place) {
+            const marker = new google.maps.Marker({
+                map: map,
+                position: place.geometry.location,
+                title: place.name
+            });
+
+            markers.push(marker);
+
+            // 마우스를 올렸을 때 사진 포함 기본 정보 표시
+            google.maps.event.addListener(marker, 'mouseover', () => {
+                let content = `<div><strong>${place.name}</strong><br>${place.vicinity}</div>`;
+
+                if (place.photos && place.photos.length > 0) {
+                    const photoUrl = place.photos[0].getUrl({ maxWidth: 100, maxHeight: 100 });
+                    content = `<div><img src="${photoUrl}" style="width:100px; height:100px; margin-bottom:10px;"><br>${content}</div>`;
+                }
+
+                infowindow.setContent(content);
+                infowindow.open(map, marker);
+            });
+
+            // 마커 클릭 시 이미지와 리뷰 정보 표시
+            google.maps.event.addListener(marker, 'click', () => {
+                service.getDetails({ placeId: place.place_id }, (result, status) => {
+                    if (status === google.maps.places.PlacesServiceStatus.OK) {
+                        let content = `<h3>${result.name}</h3><p>${result.formatted_address}</p>`;
+                        
+                        // 이미지 추가
+                        if (result.photos && result.photos.length > 0) {
+                            const photoUrl = result.photos[0].getUrl({ maxWidth: 200, maxHeight: 200 });
+                            content += `<img src="${photoUrl}" alt="${result.name}" style="width:100%; height:auto;"><br>`;
+                        }
+
+                        // 리뷰 추가
+                        if (result.reviews) {
+                            content += `<h4>리뷰:</h4><ul>`;
+                            result.reviews.slice(0, 3).forEach(review => {
+                                content += `<li>${review.text} - <em>${review.author_name}</em></li>`;
+                            });
+                            content += `</ul>`;
+                        } else {
+                            content += "<p>리뷰가 없습니다.</p>";
+                        }
+
+                        infowindow.setContent(content);
+                        infowindow.open(map, marker);
+                    } else {
+                        infowindow.setContent('<p>세부 정보를 가져올 수 없습니다.</p>');
+                        infowindow.open(map, marker);
+                    }
+                });
+            });
+        }
+// 콤보 박스 선택된 건물 위치 표시
+function showBuildingLocation(building) {
+    // 각 구역의 건물 좌표 데이터
+    const buildingLocations = {
+        // A구역
+        대학본부: { lat: 34.90850698343737, lng: 126.4343014031394 },
+        종합운동장: { lat: 34.90681536727997, lng: 126.43196169429513 },
+        학군단: { lat: 34.90578806432799, lng: 126.43303314422208 },
+        체육관: { lat: 34.90695771840026, lng: 126.43386662006378 },
+        박물관: { lat: 34.907375647489374, lng: 126.43475711345673 },
+        고시생활관 : { lat: 34.907398376910756, lng: 126.43593549717309 },
+        사회과학대학: { lat: 34.908237894467234, lng: 126.43644690513611 },
+        중앙도서관: { lat: 34.908902141886045, lng: 126.43550796137512 },
+        정보종합센터: { lat: 34.90908324046938, lng: 126.43483025645318 },
+        생활편의관: { lat: 34.910265870358586, lng: 126.43425805164165 },
+        학생회관: { lat: 34.90977766304675, lng: 126.43582096730562 },
+        창조관: { lat: 34.905627214519484, lng: 126.4326029093097 },
+        플라자60: { lat: 34.90987617819438, lng: 126.43440446257594 },
+        기념관: { lat: 34.90758857681631, lng: 126.43359662059723},
+        차고지: { lat: 34.908490779466426, lng: 126.43427829948385},
+        수위실: { lat: 34.908490779466426, lng: 126.43427829948385 },
+
+        // B구역        
+        인문대학: { lat: 34.91090376406949, lng: 126.43536865711212 },
+        공동실험실습관: { lat: 34.911665529960395, lng: 126.43524885166528 },
+        교수회관: { lat: 34.91204311097747, lng: 126.43584072589874 },
+        공과대학1호관: { lat: 34.91235259043454, lng: 126.43737415798697 },
+        공과대학2호관: { lat: 34.912753629428856, lng: 126.43655697819625 },
+        공과대학3호관: { lat: 34.91335701711989, lng: 126.43731693730629 },
+        공과대학4호관: { lat: 34.91285187272555, lng: 126.43799106572786 },
+        공과대학5호관: { lat: 34.91447351823785, lng: 126.43911838531494 },
+        교수아파트: { lat: 34.913759942974764, lng: 126.43603054994558 },
+        생활과학관: { lat: 34.91348596776738, lng: 126.4385336637497 },
+        대외협력관: { lat: 34.91416872833238, lng: 126.43837143255281 },
+        스포츠센터: { lat: 34.91485841776483, lng: 126.43838882446289 },
+        창업보육센터: { lat: 34.91354555659186, lng: 126.44087501297192 },
+        산학융합센터: { lat: 34.908490779466426, lng: 126.43427829948385 },
+        부속공장: { lat: 34.91368386335048, lng: 126.44008728812337 },
+        부속농장: { lat: 34.91423219824032, lng: 126.43955209784491 },
+        위험물옥내저장소: { lat: 34.908490779466426, lng: 126.43427829948385 },
+        
+        // C 구역
+        자연과학대학1호관: { lat: 34.910180116606504, lng: 126.43714427947998 },
+        자연과학대학2호관: { lat: 34.909988755876704, lng: 126.43834054470062 },
+        학생생활관관리동: { lat: 34.90995533910875, lng: 126.43939679358334 },
+        학생생활관가람관: { lat: 34.90944467485229, lng: 126.43982237069162 },
+        학생생활관다래관: { lat: 34.90962027333648, lng: 126.44048666440221 },
+        학생생활관햇귀관: { lat: 34.91030234414196, lng: 126.44015585856829 },
+        학생생활관한울관: { lat: 34.91031718904833, lng: 126.4408992921435 },
+        학생생활관마루ㆍ다솜관: { lat: 34.909180250144445, lng: 126.44057775450723 },
+        약학관: { lat: 34.90946004617757, lng: 126.43755537671498 },
+        장비지원센터: { lat: 34.908490779466426, lng: 126.43427829948385 }
+    };
+
+    clearMarkers(); // 기존 마커 삭제
+
+    // 선택한 건물 위치에 마커 추가
+    if (building && buildingLocations[building]) {
+                const marker = new google.maps.Marker({
+                    position: buildingLocations[building],
+                    map: map,
+                    title: building
+                });
+                markers.push(marker);
+                map.panTo(buildingLocations[building]);
+                alert(`${building} 위치가 지도에 표시됩니다.`);
+            }
+        }
+        function clearMarkers() {
+            markers.forEach(marker => marker.setMap(null));
+            markers = [];
+        }
+        function toggleDropdown(dropdownId) {
+        const dropdown = document.getElementById(dropdownId);
+        closeAllDropdowns(); // 다른 드롭다운을 모두 닫음
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function closeAllDropdowns() {
+        document.querySelectorAll('.dropdown').forEach(dropdown => dropdown.style.display = 'none');
+    }
+
+    document.addEventListener('click', function(event) {
+        const isButton = event.target.classList.contains('zone-button');
+        if (!isButton) {
+            closeAllDropdowns();
+        }
+    });
+// 날씨 팝업 닫기
+document.getElementById("closeWeatherButton").addEventListener("click", () => {
+    document.getElementById("weatherPopup").style.display = "none";
+});
+
+// 날씨 정보 자동 로딩
+function loadWeatherPopup() {
+    document.getElementById("weatherPopup").style.display = "block";
+    fetchWeatherData(); // 날씨 정보 가져오기
+}
+
+// 날씨 정보 가져오기
+async function fetchWeatherData() {
+    const apiKey = '5f2b9edc7ce7bc01b10ee5f0ef56a31f'; // API 키 입력
+    const lat = 34.910319; // 목포대학교 위도
+    const lon = 126.4361795; // 목포대학교 경도
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=kr`;
+
+    try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('날씨 정보를 가져오지 못했습니다.');
+
+        const data = await response.json();
+        displayWeatherData(data);
+    } catch (error) {
+        document.getElementById('weatherContent').innerHTML = `<p>${error.message}</p>`;
+        console.error('Error fetching weather data:', error);
+    }
+}
+
+// 날씨 정보 표시
+function displayWeatherData(data) {
+    const { main, weather, wind } = data;
+    const temperature = main.temp.toFixed(1); // 현재 기온
+    const description = weather[0].description; // 날씨 설명
+    const icon = `https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`;
+    const windSpeed = wind.speed; // 풍속
+
+    const weatherHtml = `
+        <div style="display: flex; align-items: center;">
+            <img src="${icon}" alt="${description}" style="width: 50px; height: 50px; margin-right: 10px;">
+            <span>${temperature}°C, ${description}, 풍속: ${windSpeed} m/s</span>
+        </div>
+    `;
+
+    document.getElementById('weatherContent').innerHTML = weatherHtml;
+}
+
+// 페이지 로드 시 날씨 팝업 열기
+window.onload = loadWeatherPopup;
+
+// 검색 기능
+function searchText() {
+    const searchInput = document.getElementById("searchInput").value.toLowerCase();
+    if (!searchInput) {
+        removeHighlights(); // 검색어가 없으면 강조 제거
+        return;
+    }
+
+    // 모든 기존 강조 표시 제거
+    removeHighlights();
+
+    // 텍스트가 포함된 요소 찾기
+    highlightText(document.body, searchInput);
+}
+
+// 강조 표시 제거
+function removeHighlights() {
+    const highlighted = document.querySelectorAll('.highlight');
+    highlighted.forEach(element => {
+        const parent = element.parentNode;
+        parent.replaceChild(document.createTextNode(element.innerText), element);
+    });
+}
+
+// 텍스트 강조 표시 (재귀적 탐색)
+function highlightText(node, searchInput) {
+    if (node.nodeType === Node.TEXT_NODE) {
+        const value = node.nodeValue.toLowerCase();
+        const index = value.indexOf(searchInput);
+
+        if (index !== -1) {
+            const span = document.createElement("span");
+            span.className = "highlight";
+            span.textContent = node.nodeValue.substring(index, index + searchInput.length);
+
+            const after = document.createTextNode(node.nodeValue.substring(index + searchInput.length));
+            const before = document.createTextNode(node.nodeValue.substring(0, index));
+
+            const parent = node.parentNode;
+            parent.replaceChild(after, node);
+            parent.insertBefore(span, after);
+            parent.insertBefore(before, span);
+
+            // 스크롤 이동
+            span.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+    } else if (node.nodeType === Node.ELEMENT_NODE) {
+        node.childNodes.forEach(child => highlightText(child, searchInput));
+    }
+}
+
+// 검색어 입력 시 강조 효과 자동 제거
+document.getElementById("searchInput").addEventListener("input", () => {
+    const searchInput = document.getElementById("searchInput").value;
+    if (!searchInput) removeHighlights();
+});
+
+// CSS (highlight 클래스 스타일 추가) 
+const style = document.createElement('style');
+style.innerHTML = `
+    .highlight {
+        background-color: yellow;
+        font-weight: bold;
+    }
+`;
+document.head.appendChild(style);
+
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5fXgyKF5ui5d_Wa6KBJOix0eKrYSxvnc&libraries=places&callback=initMap" async defer></script>
+</body>
+</html>

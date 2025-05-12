@@ -1,0 +1,511 @@
+*{
+  font-family: 'Noto Sans KR', sans-serif;
+  list-style: none;
+  text-decoration: none;
+  border-collapse: collapse;
+  margin:0px;
+  padding: 0px;
+  color: #000;
+}
+
+/* 상단 고정된 헤더 스타일 */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 86px;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1000;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  width: 100%; /* 전체 화면 너비 */
+  box-sizing: border-box;
+  max-width: none; /* 너비 제한 해제 */
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 100;
+}
+.contents1{
+  font-size: 24px;
+  line-height: 0.8;  /* 총 학생 수, 설립 연도 부분 높이 */
+  font-weight: lighter;
+}
+.contents2{
+  font-size: 18px;
+  
+}
+.contents3 {
+  font-size: 14px;
+  font-weight: 100;
+}
+.contents1_bold{
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px; /* 제목을 살짝 아래로 내립니다 */
+
+}
+/* --- */
+
+.result{
+  font-size: 24px;
+}
+
+/* intro 섹션 */
+.intro_bg {
+  background-image: url("image/intro.png");
+  width: 100%;
+  height: 714px;
+  padding-top: 86px; /* 헤더 높이만큼 여백을 추가 */
+  background-size: cover;
+  background-position: center;
+}
+
+.header{
+  width:1280px;
+  margin:auto;
+  display:flex;
+  height: 86px;
+}
+/* 검색 창 위치 조정 */
+.searchArea {
+  width: 300px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  margin-top: 12px;
+}
+
+/* 검색 입력 필드 스타일 */
+.searchArea > form > input {
+  border: none;
+  width: 250px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.0);
+  color: #fff;
+  padding-left: 10px;
+  font-size: 16px;
+}
+/* 검색 버튼 스타일 */
+.searchArea > form > span {
+  width: 50px;
+  color: #fff;
+  font-size: 16px;
+}
+
+/* placeholder 텍스트 색상을 검정으로 변경 */
+.searchArea > form > input::placeholder {
+  color: #ffffff9a; /* placeholder 'search' 텍스트를 검정색으로 변경 */
+}
+.nav {
+  display: flex;
+  gap: 20px; /* 메뉴 항목 간의 간격 조정 */
+  align-items: center;
+}
+.nav > li {
+  margin-left:40px;
+}
+
+.nav > li > a {
+  color: #000; /* 텍스트 색상 검정으로 설정 */
+  font-size: 20px; /* 글자 크기 증가 */
+  font-weight: bold; /* 글자 두께를 굵게 설정 */
+}
+
+.amount{
+  position: relative;
+  top:-90px;
+  display: flex;
+  width:1280px;
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+.amount > li {
+  flex: 1;
+  height: 132px;
+}
+.amount > li > div {
+  text-align: center;
+  margin-top:37px;
+  height:57px;
+}
+
+.amount > li:not(:last-child) > div{
+  border-right:1px solid #E1E1E1;
+}
+
+.amount img {
+  width: 80px; /* 이미지의 최대 너비 */
+  height: auto; /* 높이를 자동으로 맞춤 */
+  margin-bottom: 10px;
+}
+
+.intro_text{
+  width:100%;
+  margin:231px auto 231px auto;
+  text-align: center;
+}
+.intro_text > h1,
+.intro_text > h4{
+  color:#fff;
+}
+
+/* main_text0 */
+
+.main_text0{
+  width: 100%;
+  height:601px;
+  margin-top:-150px;
+  background: #f1f2f3;
+  color: #fff; /* 텍스트를 밝게 설정 */
+
+}
+.main_text0 > h1{
+  padding-top:116px;
+  text-align: center;
+}
+.main_text0 > .contents1 {
+  text-align: center;
+}
+
+.icons{
+  display: flex;
+  width:1280px;
+  height: 302px;
+  margin:auto;
+}
+.icons > li {
+  flex: 1;
+  background: white;
+  margin-top:20px;
+  height:302px;
+  text-align: center;
+}
+.icons > li > .icon_img{
+  margin-top:40px;
+}
+
+.icons > li:not(:last-child){
+  margin-right: 20px;
+}
+
+.icons .contents2 {
+  width:280px;
+  margin:auto;
+  letter-spacing: -1px;
+}
+.more{
+  width:100px;
+  height: 30px;
+  background: #2F7AF4;
+  color: #fff;
+  font-size: 12px;
+  line-height: 30px;
+  margin:25px auto;
+}
+
+ /* SERVICE 섹션 스타일 */
+
+.main_text1{
+  width: 100%;
+  height:659px;
+  background-color: #f9f9f9; /* SERVICE 섹션에 연한 회색 배경 */
+}
+.main_text1 > h1{
+  padding-top:30px;
+  text-align: center;
+}
+.main_text1 > .contents1 {
+  text-align: center;
+}
+.service {
+  width:1280px;
+  display: flex;
+  margin: 49px auto;
+  height:425px;
+}
+
+.service > .contents2 {
+  padding: 20px;
+}
+.service > .contents2 > h2{
+  margin-bottom: 27px;
+}
+
+        /* 구역 선택 버튼 스타일 */
+        .zone-buttons {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 15px;
+          margin-top: 20px;
+          padding-bottom: 20px;
+      }
+      .zone-button {
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          color: white;
+          font-weight: bold;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+      .zone-button:hover{
+        transform: scale(1.1);
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+      #zoneAButton { background-color: #008080; }
+      #zoneBButton { background-color: #0044cc; }
+      #zoneCButton { background-color: #b0b0b0; }
+      .zone-button:hover {
+          background-color: #0056b3;
+          transform: scale(1.05);
+      }
+
+      /* 드롭다운 스타일 */
+      .dropdown {
+          display: none;
+          position: absolute;
+          background-color: white;
+          border: 1px solid #ddd;
+          padding: 10px;
+          margin-top: 5px;
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+          z-index: 10;
+      }
+      .dropdown a {
+          display: block;
+          padding: 5px;
+          text-decoration: none;
+          color: #333;
+      }
+      .dropdown a:hover {
+          background-color: #f1f1f1;
+      }
+/* 날씨 정보 팝업 스타일 */
+.weather-popup {
+  position: fixed;
+  top: 40%; /* 화면 세로 중앙 */
+  right: 20px; /* 오른쪽 여백 */
+  transform: translateY(-50%); /* 수직 가운데 정렬 */
+  width: 250px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 1000; /* 다른 요소 위에 표시 */
+  display: none; /* 초기에는 숨김 */
+  white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+
+}
+
+.weather-popup h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.weather-popup .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Q&A 섹션 부분 */
+.main_text2 {
+  width:100%;
+  height:500px;
+  background-image: url("image/contact.png");
+  margin-top: 100px; /* 지도와 겹치지 않도록 여백을 추가 */
+
+}
+
+.main_text2 > ul {
+  display: flex;
+  padding-top:200px;
+}
+
+.main_text2 > ul > li {
+  flex: 1;
+  text-align: center;
+}
+.main_text2 > ul > li > div,
+.main_text2 > ul > li > div > h1{
+  color: #fff;
+}
+.more2{
+  width:220px;
+  height:40px;
+  border: 1px solid #fff;
+  color: #fff;
+  line-height: 40px;
+  cursor: pointer;
+  margin:16px auto;
+}
+
+.footer{
+  display: flex;
+  background: #1f1f1f;
+  padding:30px;
+}
+.footer > div:first-child {
+  flex:3;
+  text-align: center;
+  color: #fff;
+}
+.footer > div:last-child {
+  flex:9;
+  color: #fff;
+}
+.button-style{
+  width: 100px;
+  height: 30px;
+  background: #2F7AF4;
+  color: #fff;
+  font-size: 12px;
+  line-height: 30px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0; /* 각 버튼 간의 여백을 없애기 위해 margin 제거 */
+  padding: 0; /* 필요 시 padding도 최소화 */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button-style:hover {
+  background-color: #1e5bbf;
+  transform: scale(1.1);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.chatbot-button {
+  background-color: #2F7AF4;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* 챗봇 모달 창 스타일 (전체 화면 덮기) */
+.chatbot-modal {
+  display: none; /* 초기에는 숨김 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* 화면 전체 너비 */
+  height: 100vh; /* 화면 전체 높이 */
+  background-color: rgba(0, 0, 0, 0.7); /* 조금 더 어두운 반투명 배경 */
+  animation: fadeIn 0.4s ease-in-out;
+  z-index: 1100; /* 다른 요소들보다 위에 위치 */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 챗봇 창을 화면 중앙에 위치 */
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 챗봇 상담 창 콘텐츠 스타일 */
+.chatbot-content {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+
+/* 챗봇 메시지 및 입력 스타일 */
+.chatbot-messages {
+  height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#chatbotInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* 닫기 버튼 스타일 */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+
+/* 애니메이션 효과 */
+.icon_img, .button-style {
+  transition: transform 0.2s;
+}
+
+.icon_img:hover, .button-style:hover {
+  transform: scale(1.1);
+}
+
+/* 로딩 스피너 */
+.loader {
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 버튼 스타일(MORE) */
+.button-more {
+  width: 100px;
+  height: 30px;
+  background: #2F7AF4;
+  color: #fff;
+  font-size: 12px;
+  line-height: 30px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px auto;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-more:hover {
+  background-color: #1e5bbf;
+  transform: scale(1.1);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);  
+}
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
