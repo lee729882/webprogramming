@@ -17,14 +17,6 @@
 
 <br/>
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/PLACEHOLDER_MAP" width="32%" alt="Map Feature">
-  <img src="https://github.com/user-attachments/assets/PLACEHOLDER_WEATHER" width="32%" alt="Weather Popup">
-  <img src="https://github.com/user-attachments/assets/PLACEHOLDER_CHATBOT" width="32%" alt="AI Chatbot">
-</div>
-
-<br/>
-
 ## 🛠 시스템 구조 (Architecture)
 
 ```mermaid
