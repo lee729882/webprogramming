@@ -78,3 +78,13 @@ function highlightText(node, searchInput) {
 REACT_APP_GOOGLE_MAPS_KEY=your_google_key
 OPENAI_API_KEY=your_openai_key
 ```
+<br/>
+
+## ⚙️ 기술 스택 (Tech Stack)
+
+| Category | Technology |
+|---|---|
+| **Frontend** | React.js, HTML5, CSS3, JavaScript (ES6+), Bootstrap |
+| **Backend** | Node.js, Express |
+| **APIs** | Google Maps API, OpenWeatherMap API, ChatGPT API |
+| **Tools** | Git, VS Code, Postman |
